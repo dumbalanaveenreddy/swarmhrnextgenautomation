@@ -1,0 +1,68 @@
+12:17:16,140 DEBUG devpinoyLogger:54 - Configuration file Loaded !!!
+12:17:16,142 DEBUG devpinoyLogger:70 - OR file Loaded !!!
+12:17:16,268 DEBUG InternalLoggerFactory:89 - Using Log4J as the default logging framework
+12:17:16,277 DEBUG ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
+12:17:16,277 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
+12:17:16,282 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5c86a017
+12:17:16,298 DEBUG PlatformDependent0:460 - -Dio.netty.noUnsafe: false
+12:17:16,298 DEBUG PlatformDependent0:954 - Java version: 8
+12:17:16,299 DEBUG PlatformDependent0:135 - sun.misc.Unsafe.theUnsafe: available
+12:17:16,299 DEBUG PlatformDependent0:159 - sun.misc.Unsafe.copyMemory: available
+12:17:16,300 DEBUG PlatformDependent0:202 - java.nio.Buffer.address: available
+12:17:16,300 DEBUG PlatformDependent0:272 - direct buffer constructor: available
+12:17:16,301 DEBUG PlatformDependent0:350 - java.nio.Bits.unaligned: available, true
+12:17:16,301 DEBUG PlatformDependent0:424 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+12:17:16,301 DEBUG PlatformDependent0:446 - java.nio.DirectByteBuffer.<init>(long, int): available
+12:17:16,302 DEBUG PlatformDependent:1103 - sun.misc.Unsafe: available
+12:17:16,303 DEBUG PlatformDependent:1224 - -Dio.netty.tmpdir: C:\Users\dumb\AppData\Local\Temp (java.io.tmpdir)
+12:17:16,304 DEBUG PlatformDependent:1303 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+12:17:16,304 DEBUG PlatformDependent:1063 - Platform: Windows
+12:17:16,305 DEBUG PlatformDependent:178 - -Dio.netty.maxDirectMemory: 1883242496 bytes
+12:17:16,306 DEBUG PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+12:17:16,307 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+12:17:16,307 DEBUG PlatformDependent:205 - -Dio.netty.noPreferDirect: false
+12:17:16,314 DEBUG PlatformDependent:967 - org.jctools-core.MpscChunkedArrayQueue: available
+12:17:16,335 DEBUG InternalThreadLocalMap:83 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+12:17:16,335 DEBUG InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+12:17:16,808 DEBUG JdkSslContext:97 - Default protocols (JDK): [TLSv1.2, TLSv1.1, TLSv1] 
+12:17:16,809 DEBUG JdkSslContext:98 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+12:17:16,833 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 16
+12:17:16,841 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+12:17:16,841 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+12:17:16,885 DEBUG PooledByteBufAllocator:155 - -Dio.netty.allocator.numHeapArenas: 16
+12:17:16,885 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numDirectArenas: 16
+12:17:16,885 DEBUG PooledByteBufAllocator:158 - -Dio.netty.allocator.pageSize: 8192
+12:17:16,885 DEBUG PooledByteBufAllocator:163 - -Dio.netty.allocator.maxOrder: 11
+12:17:16,885 DEBUG PooledByteBufAllocator:167 - -Dio.netty.allocator.chunkSize: 16777216
+12:17:16,885 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.smallCacheSize: 256
+12:17:16,885 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.normalCacheSize: 64
+12:17:16,885 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+12:17:16,885 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.cacheTrimInterval: 8192
+12:17:16,886 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+12:17:16,886 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.useCacheForAllThreads: true
+12:17:16,886 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+12:17:16,895 DEBUG ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
+12:17:16,895 DEBUG ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
+12:17:16,896 DEBUG ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+12:17:17,736 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 2276 (auto-detected)
+12:17:17,738 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+12:17:17,738 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+12:17:17,963 DEBUG NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+12:17:17,964 DEBUG NetUtil:187 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+12:17:18,184 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 80:2b:f9:ff:fe:8f:d8:7d (auto-detected)
+12:17:18,237 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+12:17:18,237 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+12:17:18,237 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6665c68b
+12:17:18,262 DEBUG Recycler:103 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+12:17:18,262 DEBUG Recycler:104 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+12:17:18,262 DEBUG Recycler:105 - -Dio.netty.recycler.linkCapacity: 16
+12:17:18,262 DEBUG Recycler:106 - -Dio.netty.recycler.ratio: 8
+12:17:18,263 DEBUG Recycler:107 - -Dio.netty.recycler.delayedQueue.ratio: 8
+12:17:18,952 DEBUG Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+12:17:19,142 DEBUG ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0x002479eaafd9b6b4
+12:17:19,180 DEBUG devpinoyLogger:85 - Chrome Launched !!!
+12:17:26,151 DEBUG devpinoyLogger:92 - Navigated to : https://uat-env.swarmhr.com/#/
+12:17:28,501 DEBUG devpinoyLogger:20 - Username Entered!!!
+12:17:30,608 DEBUG devpinoyLogger:25 - Password Entered!!!
+12:17:31,659 DEBUG devpinoyLogger:29 - SwarmHR Employee Logged In Successfully!!!
+12:17:35,314 DEBUG devpinoyLogger:122 - Test Execution Completed!!!

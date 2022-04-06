@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UserLoginTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.374">
+  <properties />
+  
+  
+            <testcase name="logintest" time="8.374" classname="com.swarmhraut.testcases.LoginTest" />
+      
+</testsuite>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[SwarmHR Employee Logged In Successfully!!!]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank"href="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png">Screenshot</a>]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank"href="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png"><img src="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png" height=200 width=200></img></a>]]>
+    </line>
+  </reporter-output>
+  <suite name="SwarmHRAutomation" duration-ms="8407" started-at="2022-03-21T12:57:48 IST" finished-at="2022-03-21T12:57:56 IST">
+    <groups>
+    </groups>
+    <test name="UserLoginTest" duration-ms="8407" started-at="2022-03-21T12:57:48 IST" finished-at="2022-03-21T12:57:56 IST">
+      <class name="com.swarmhraut.testcases.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.swarmhraut.testcases.LoginTest@6a84a97d]" name="setUp" is-config="true" duration-ms="10399" started-at="2022-03-21T12:57:37 IST" finished-at="2022-03-21T12:57:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:com.swarmhraut.testcases.LoginTest@6a84a97d]" name="logintest" duration-ms="8374" started-at="2022-03-21T12:57:48 IST" data-provider="getdata" finished-at="2022-03-21T12:57:56 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swarmadmin_occi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$w@rm@dmin_occi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[SwarmHR Employee Logged In Successfully!!!]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank"href="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png">Screenshot</a>]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank"href="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png"><img src="C:\Users\dumb\Pictures\Screenshots\Screenshot (21).png" height=200 width=200></img></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.swarmhraut.testcases.LoginTest@6a84a97d]" name="tearDown" is-config="true" duration-ms="656" started-at="2022-03-21T12:57:56 IST" finished-at="2022-03-21T12:57:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.swarmhraut.testcases.LoginTest -->
+    </test> <!-- UserLoginTest -->
+  </suite> <!-- SwarmHRAutomation -->
+</testng-results>

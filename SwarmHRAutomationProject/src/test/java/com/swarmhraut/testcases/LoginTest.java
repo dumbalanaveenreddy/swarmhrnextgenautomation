@@ -1,0 +1,92 @@
+package com.swarmhraut.testcases;
+
+import java.util.Hashtable;
+
+import org.testng.SkipException;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.swarmhraut.base.TestBase;
+import com.swarmhraut.utilities.TestUtil;
+
+public class LoginTest extends TestBase {
+	@Test(dataProviderClass=TestUtil.class,dataProvider="dp")
+	
+	public  void logintest(Hashtable<String,String> data) throws InterruptedException {
+		
+		
+if(!data.get("runmode").equals("Y")){
+			
+			throw new SkipException("Skipping the test case as the Run mode for data set is NO");
+		}
+		
+Thread.sleep(1000);
+
+
+click("Username_XPATH");
+Thread.sleep(1000);
+clear("Username_XPATH");
+Thread.sleep(3000);
+type("Username_XPATH",data.get("username"));
+Thread.sleep(3000);
+click("Password_XPATH");
+Thread.sleep(1000);
+clear("Password_XPATH");
+Thread.sleep(3000);
+type("Password_XPATH",data.get("password"));
+Thread.sleep(3000);
+click("Loginbtn_XPATH");
+
+		/*driver.findElement(By.xpath(OR.getProperty("Username_XPATH"))).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(OR.getProperty("Username_XPATH"))).sendKeys(username);
+		log.debug("Username Entered!!!");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(OR.getProperty("Password_XPATH"))).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(OR.getProperty("Password_XPATH"))).sendKeys(password);
+		log.debug("Password Entered!!!");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(OR.getProperty("Loginbtn_XPATH"))).click();
+		Thread.sleep(1000);*/
+
+
+
+		/*
+		 * driver.findElement(By.xpath(OR.getProperty("UsernameDropdown_XPATH"))).click(
+		 * ); Thread.sleep(1000);
+		 * driver.findElement(By.xpath(OR.getProperty("Logoutbtn_XPATH"))).click();
+		 * Thread.sleep(3000);
+		 */
+		/*
+		 * Thread.sleep(3000);
+		 * 
+		 * Alert alert= wait.until(ExpectedConditions.alertIsPresent());
+		 * Assert.assertTrue(alert.getText().contains(alerttext)); Thread.sleep(3000);
+		 * alert.accept();
+		 */
+	
+		}
+
+	@DataProvider (name ="getdata")
+	public Object[][] getData() {
+
+		String sheetName = "LoginTest";
+
+		int rows = excel.getRowCount(sheetName);
+		int cols = excel.getColumnCount(sheetName);
+
+		Object[][] data = new Object[rows - 1][cols];
+
+		for (int rowNum = 2; rowNum <= rows; rowNum++) {
+			for (int colNum = 0; colNum < cols; colNum++) {
+				data[rowNum - 2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
+				// -2
+			}
+		}
+
+		return data;
+
+	}
+
+}
