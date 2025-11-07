@@ -93,7 +93,7 @@ public class CustomListeners extends TestBase implements ITestListener,ISuiteLis
 		MonitoringMail mail = new MonitoringMail();
 		 
 		try {
-			messageBody = "http://" + InetAddress.getLocalHost().getHostAddress()
+			messageBody = "https://" + InetAddress.getLocalHost().getHostAddress()
 					+ ":8080/job/SwarmHRAutomationProject/Extent_Reports/";
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
@@ -101,7 +101,7 @@ public class CustomListeners extends TestBase implements ITestListener,ISuiteLis
 		}
 	
 		try {
-			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
+			mail.sendMail(TestConfig.mailServer, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

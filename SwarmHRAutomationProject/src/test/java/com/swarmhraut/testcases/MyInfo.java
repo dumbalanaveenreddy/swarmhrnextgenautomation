@@ -2,8 +2,6 @@ package com.swarmhraut.testcases;
 
 import java.util.Hashtable;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
 import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,25 +19,25 @@ if(!data.get("runmode").equals("Y")){
 			
 			throw new SkipException("Skipping the test case as the Run mode for data set is NO");
 		}
-Thread.sleep(1000);
-
+Thread.sleep(9000);
+click("ESS_XPATH");
+Thread.sleep(3000);
+click("MyInfo_XPATH");
+Thread.sleep(9000);
 click("EditProfile_XPATH");
-Thread.sleep(3000);
-clear("EditProfileEmail_XPATH");
-Thread.sleep(3000);
-type("email",data.get("email"));
-Thread.sleep(3000);
+Thread.sleep(9000);
 clear("EditProfileMobile_XPATH");
 Thread.sleep(3000);
 type("mobile",data.get("mobile"));
 Thread.sleep(3000);
 click("EditProfileupdatebtn_XPATH");
+Thread.sleep(10000);
+click("SuccessValidation_XPATH");
 Thread.sleep(3000);
-click("UsernameDropdown_XPATH");
+click("UpdatedMobileNumber_XPATH");
 Thread.sleep(3000);
-click("Logoutbtn_XPATH");
-Thread.sleep(3000);
-
+click("Logout_XPATH");
+Thread.sleep(5000);
 
 
 

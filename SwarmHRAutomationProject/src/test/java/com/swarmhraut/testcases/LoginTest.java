@@ -36,6 +36,7 @@ Thread.sleep(3000);
 type("Password_XPATH",data.get("password"));
 Thread.sleep(3000);
 click("Loginbtn_XPATH");
+Thread.sleep(5000);
 
 		/*driver.findElement(By.xpath(OR.getProperty("Username_XPATH"))).click();
 		Thread.sleep(1000);

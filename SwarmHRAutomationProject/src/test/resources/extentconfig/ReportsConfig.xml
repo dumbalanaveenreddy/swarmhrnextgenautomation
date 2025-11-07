@@ -1,50 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extentreports>
     <configuration>
-        <!-- report theme -->
-        <!-- standard, dark -->
+        <!-- visual theme: standard | dark -->
         <theme>standard</theme>
-    
+
         <!-- document encoding -->
-        <!-- defaults to UTF-8 -->
         <encoding>UTF-8</encoding>
-        
-        <!-- protocol for script and stylesheets -->
-        <!-- defaults to https -->
+
+        <!-- protocol for loading assets (css/js/logo) -->
         <protocol>https</protocol>
-        
-        <!-- title of the document -->
-        <documentTitle>SwarmHR Automation reports</documentTitle>
-        
-        <!-- report name - displayed at top-nav -->
-        <reportName>Automation Report for SwarmHR Application</reportName>
-        
-        <!-- report headline - displayed at top-nav, after reportHeadline -->
-        <reportHeadline> using Data Driven Framework</reportHeadline>
-        
-        <!-- global date format override -->
-        <!-- defaults to yyyy-MM-dd -->
+
+        <!-- page title and top nav labels -->
+        <documentTitle>SwarmHR Automation Reports</documentTitle>
+        <reportName>Automation Report — SwarmHR Application</reportName>
+        <reportHeadline>Data Driven Framework</reportHeadline>
+
+        <!-- date / time formats -->
+        <!-- dateFormat applies to displayed dates; timeFormat to displayed times -->
         <dateFormat>dd-MM-yyyy</dateFormat>
-        
-        <!-- global time format override -->
-        <!-- defaults to HH:mm:ss -->
         <timeFormat>HH:mm:ss</timeFormat>
-       
-        
-        <!-- custom javascript -->
-        <scripts>
-            <![CDATA[
-                $(document).ready(function() {
-                    
-                });
-            ]]>
-        </scripts>
-        
-        <!-- custom styles -->
+        <!-- Combined timestamp format used in exported filenames or detailed timestamps -->
+        <timeStampFormat>dd-MM-yyyy HH:mm:ss</timeStampFormat>
+
+        <!-- initial chart visibility and location (TOP or BOTTOM) -->
+        <chartVisibilityOnOpen>true</chartVisibilityOnOpen>
+        <testViewChartLocation>TOP</testViewChartLocation>
+
+        <!-- enable timeline (if supported by your Extent version) -->
+        <enableTimeline>true</enableTimeline>
+
+        <!-- Default CSS and styling (keeps report responsive and adds a logo slot) -->
         <styles>
             <![CDATA[
-                
+                /* make header compact and responsive */
+                .brand-logo { height: 46px; margin-right: 12px; vertical-align: middle; }
+                .report-name { font-size: 1.1rem; font-weight: 600; }
+                .topbar { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+                /* responsive table: allow horizontal scroll on small screens */
+                .test-list table { width:100%; overflow-x:auto; display:block; }
+                /* highlight failed tests rows slightly */
+                .test-list tr.status-fail { box-shadow: inset 0 0 0 3px rgba(255,0,0,0.03); }
+                /* small UI improvements */
+                #searchFilter { padding:6px 10px; border-radius:4px; border:1px solid #ccc; width:220px; }
             ]]>
         </styles>
+
+        <!-- custom javascript: small search/filter for the test list -->
+        <scripts>
+            <![CDATA[
+                (function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // create a simple search box in the topbar
+                        var nav = document.querySelector('.topbar') || document.querySelector('.nav');
+                        if (!nav) return;
+
+                        var input = document.createElement('input');
+                        input.id = 'searchFilter';
+                        input.placeholder = 'Filter tests (by name or status)...';
+                        nav.insertBefore(input, nav.firstChild);
+
+                        input.addEventListener('input', function (e) {
+                            var q = e.target.value.toLowerCase().trim();
+                            var rows = document.querySelectorAll('.test-list .test-row, .test-list tbody tr');
+                            if (!rows) return;
+                            rows.forEach(function (r) {
+                                var txt = (r.innerText || '').toLowerCase();
+                                r.style.display = q === '' || txt.indexOf(q) !== -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                })();
+            ]]>
+        </scripts>
+
+        <!-- logo placeholder: set to your hosted logo path; respects `protocol` -->
+        <!-- Example: https://your.cdn/branding/swarmhr-logo.png -->
+        <logo>https://uat-env.swarmhr.com/assets/logoWebApp.png</logo>
+
+        <!-- other useful toggles -->
+        <enableOfflineMode>false</enableOfflineMode> <!-- true to inline assets in HTML -->
+        <autoFlush>true</autoFlush> <!-- flush reports automatically (if supported) -->
+
+        <!-- custom attributes you might read client-side -->
+        <custom>
+            <buildNumber>BUILD-1234</buildNumber>
+            <environment>QA</environment>
+            <team>SwarmQA</team>
+        </custom>
     </configuration>
 </extentreports>

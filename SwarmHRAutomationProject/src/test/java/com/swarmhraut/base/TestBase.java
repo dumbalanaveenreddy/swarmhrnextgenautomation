@@ -3,6 +3,7 @@ package com.swarmhraut.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -102,9 +103,15 @@ public class TestBase {
 			driver.get(config.getProperty("testsiteurl"));
 			log.debug("Navigated to : " + config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
-					TimeUnit.SECONDS);
-			wait = new WebDriverWait(driver, 5);
+			// implicit wait (from config)
+			driver.manage().timeouts().implicitlyWait(
+			    Duration.ofSeconds(Long.parseLong(config.getProperty("implicit.wait")))
+			);
+
+			// explicit wait
+			wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+			
 
 		}
 
